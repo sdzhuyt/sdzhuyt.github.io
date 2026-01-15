@@ -1,36 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Docs on AK-博客</title><link>https://example.docsy.dev/tags/docs/</link><description>Recent content in Docs on AK-博客</description><generator>Hugo</generator><language>zh</language><lastBuildDate>Wed, 17 Dec 2025 14:37:21 +0800</lastBuildDate><atom:link href="https://example.docsy.dev/tags/docs/index.xml" rel="self" type="application/rss+xml"/><item><title>Getting Started</title><link>https://example.docsy.dev/docs/getting-started/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.docsy.dev/docs/getting-started/</guid><description>&lt;div class="pageinfo pageinfo-primary"&gt;
-&lt;p&gt;This is a placeholder page that shows you how to use this
-template site.&lt;/p&gt;
-
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Docs on AK-博客</title><link>https://example.docsy.dev/tags/docs/</link><description>Recent content in Docs on AK-博客</description><generator>Hugo</generator><language>zh</language><lastBuildDate>Mon, 05 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://example.docsy.dev/tags/docs/index.xml" rel="self" type="application/rss+xml"/><item><title>操作系统</title><link>https://example.docsy.dev/docs/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</link><pubDate>Mon, 05 Jan 2026 00:00:00 +0000</pubDate><guid>https://example.docsy.dev/docs/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</guid><description>&lt;div class="pageinfo pageinfo-primary"&gt;
+我的博客网站。
 &lt;/div&gt;
 
-&lt;p&gt;Information in this section helps your user try your project themselves.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;What do your users need to do to start using your project? This could include
-downloading/installation instructions, including any prerequisites or system
-requirements.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Introductory “Hello World” example, if appropriate. More complex tutorials
-should live in the Tutorials section.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Consider using the headings below for your getting started page. You can delete
-any that are not applicable to your project.&lt;/p&gt;</description></item><item><title>Example Page</title><link>https://example.docsy.dev/docs/getting-started/example-page/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>https://example.docsy.dev/docs/getting-started/example-page/</guid><description>&lt;div class="pageinfo pageinfo-primary"&gt;
-&lt;p&gt;This is a placeholder page. Replace it with your own content.&lt;/p&gt;
-
+&lt;li&gt;linux 操作系统&lt;/li&gt;
+&lt;li&gt;windows 操作系统&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>rpm包管理</title><link>https://example.docsy.dev/docs/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rpm%E5%8C%85%E7%AE%A1%E7%90%86/</link><pubDate>Mon, 05 Jan 2026 00:00:00 +0000</pubDate><guid>https://example.docsy.dev/docs/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/rpm%E5%8C%85%E7%AE%A1%E7%90%86/</guid><description>&lt;div class="pageinfo pageinfo-primary"&gt;
+linux rpm 包管理
 &lt;/div&gt;
 
-&lt;p&gt;Text can be &lt;strong&gt;bold&lt;/strong&gt;, &lt;em&gt;italic&lt;/em&gt;, or &lt;del&gt;strikethrough&lt;/del&gt;. &lt;a href="https://gohugo.io"&gt;Links&lt;/a&gt;
-should be blue with no underlines (unless hovered over).&lt;/p&gt;
-&lt;p&gt;There should be whitespace between paragraphs. Vape migas chillwave sriracha
-poutine try-hard distillery. Tattooed shabby chic small batch, pabst art party
-heirloom letterpress air plant pop-up. Sustainable chia skateboard art party
-banjo cardigan normcore affogato vexillologist quinoa meggings man bun master
-cleanse shoreditch readymade. Yuccie prism four dollar toast tbh cardigan
-iPhone, tumblr listicle live-edge VHS. Pug lyft normcore hot chicken biodiesel,
-actually keffiyeh thundercats photo booth pour-over twee fam food truck
-microdosing banh mi. Vice activated charcoal raclette unicorn live-edge
-post-ironic. Heirloom vexillologist coloring book, beard deep v letterpress echo
-park humblebrag tilde.&lt;/p&gt;</description></item></channel></rss>
+&lt;h2 id="rpm-包制作"&gt;rpm 包制作&lt;a class="td-heading-self-link" href="#rpm-%e5%8c%85%e5%88%b6%e4%bd%9c" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;spec 文件介绍&lt;/p&gt;
+&lt;h2 id="rpm-命令"&gt;rpm 命令&lt;a class="td-heading-self-link" href="#rpm-%e5%91%bd%e4%bb%a4" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;查看rpm包中是否提供指定的内容：
+rpm -q &amp;ndash;provides package_name&lt;/li&gt;
+&lt;li&gt;查看rpm制作是的内部宏信息：
+rpm &amp;ndash;eval &amp;ldquo;%{dist}&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

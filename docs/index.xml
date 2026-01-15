@@ -41,4 +41,71 @@ great example.&lt;/p&gt;
 &lt;p&gt;Don&amp;rsquo;t forget to link to your own doc repo rather than our example site! Also
 make sure users can find these guidelines from your doc repo README: either add
 them there and link to them from this page, add them here and link to them from
-the README, or include them in both locations.&lt;/p&gt;</description></item></channel></rss>
+the README, or include them in both locations.&lt;/p&gt;</description></item><item><title/><link>https://example.docsy.dev/docs/github+obsidian+hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://example.docsy.dev/docs/github+obsidian+hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid><description>&lt;h1 id="github"&gt;github&lt;a class="td-heading-self-link" href="#github" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h1&gt;
+&lt;h2 id="github-pages"&gt;github pages&lt;a class="td-heading-self-link" href="#github-pages" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id="action"&gt;action&lt;a class="td-heading-self-link" href="#action" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;cat .github/workflows/gh-pages.yml&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;name: Deploy Hugo site to GitHub Pages
+
+on:
+ push:
+ branches:
+ - main
+
+permissions:
+ contents: read
+ pages: write
+ id-token: write
+
+concurrency:
+ group: &amp;#34;pages&amp;#34;
+ cancel-in-progress: false
+
+jobs:
+ build:
+ runs-on: ubuntu-latest
+
+ steps:
+ - name: Checkout
+ uses: actions/checkout@v4
+ with:
+ submodules: recursive # Docsy 必须
+ fetch-depth: 0
+
+ - name: Setup Hugo
+ uses: peaceiris/actions-hugo@v3
+ with:
+ hugo-version: &amp;#39;0.152.2&amp;#39; # 建议固定
+ extended: true
+
+ - name: Setup Node.js
+ uses: actions/setup-node@v4
+ with:
+ node-version: &amp;#39;24&amp;#39;
+ cache: &amp;#39;npm&amp;#39;
+
+ - name: Install Node dependencies
+ run: npm ci
+
+ - name: Build
+ run: hugo --minify
+
+ - name: Upload artifact
+ uses: actions/upload-pages-artifact@v3
+ with:
+ path: ./public
+
+ - name: Deploy
+ uses: peaceiris/actions-gh-pages@v3 # 一个自动发布 github pages 的 action
+ with:
+ external_repository: sdzhuyt/sdzhuyt.github.io
+ personal_token: ${{ secrets.GH_PAT }}
+ publish_dir: ./public
+ publish_branch: main
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;创建 token
+setting -&amp;gt;&lt;/li&gt;
+&lt;li&gt;指定 ak-blog secrets
+settings -&amp;gt; Secrets and variables -&amp;gt; Actions
+将上一步骤中创建的 token 值复制到这里。&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>
